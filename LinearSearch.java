@@ -72,5 +72,35 @@ public class Main {
                System.out.println(arr[i] + " " );
           }
      }
+     //----------------------------------------------------------------------------------------------------
+
+     // DELETION OF ELEMENT
+     //removing an element creates an empty space. To maintain the array structure , all elements after the deleted
+     // element must shift one position to the left
+     //ALGORITHM
+     /*
+     Start from pos
+     ↓
+     Move every next element one position left
+     ↓
+     Decrease size by 1
+     */
+     // JAVA IMPLEMENTATION
+     public class Deletion {
+          public static void main(String[] args) {
+               int[] arr = { 10, 20, 30, 40, 50};
+               int size = 5;
+               int pos = 2;
+               // Shift elements left
+         for(int i = pos; i < size - 1; i++) {
+              arr[i] = arr[i-1];
+         }
+               size--;
+       // Print updated array 
+               for(int i = 0; i < size; i++) {
+                    System.out.print(arr[i] + " " );
+               }
+          }
+     } // 10 20 40 50 
 }
 
